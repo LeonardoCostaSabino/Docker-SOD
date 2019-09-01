@@ -2,7 +2,7 @@ version: '3'
 services:
 
   #PHP Service
-  app:
+  app-sod:
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,7 +21,7 @@ services:
       - app-network
 
   #Nginx Service
-  webserver:
+  webserver-sod:
     image: nginx:alpine
     container_name: webserver
     restart: unless-stopped
@@ -36,7 +36,7 @@ services:
       - app-network
 
   #MySQL Service
-  db:
+  db-sod:
     image: mysql:5.7.22
     container_name: db
     restart: unless-stopped
