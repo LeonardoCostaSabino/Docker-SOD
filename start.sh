@@ -2,26 +2,13 @@
 
 echo -e "Bem ao Docker-Laravel\n";
 
-echo -e "Criado pela DigitalOcean, desenvolvedor utilizador: Leonardo Costa Sabino";
+echo "Criado pela DigitalOcean, desenvolvedor utilizador: Leonardo Costa Sabino";
 
 sleep 2;
 
 docker run --rm -v $(pwd):/app composer install
 
-docker-compose up --build
-
-docker-compose exec db bash
-
-mysql -u root -p
-
-show databases;
-
-GRANT ALL ON sod.* TO 'sistemas'@'%' IDENTIFIED BY '123456';
-
-FLUSH PRIVILEGES;
-
-EXIT;
-
-exit
+docker-compose up -d --build
+echo -e 'docker-compose exec db mysql -u root -p\n docker-compose exec db show databases;\n docker-compose exec db GRANT ALL ON sod.* TO 'sistemas'@'%' IDENTIFIED BY '123456';\n docker-compose exec db FLUSH PRIVILEGES;'
 
 docker-compose exec app php artisan migrate
