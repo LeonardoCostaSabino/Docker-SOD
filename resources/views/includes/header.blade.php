@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img src="../../images/sod-2.png" width="50" height="25" class="d-inline-block align-top" alt="">
+        <img src="../../images/sod-2.png" width="60" height="25" class="d-inline-block align-top" alt="">
         SOD-UNISUAM
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +18,29 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cadastros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Cliente</a>
+                         <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Funcionário</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Consultas
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Relatórios</a>
-                    <a class="dropdown-item" href="#">Avaliações</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Atendimentos</a>
+                        <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Dashboard</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Fila</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Agenda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Localizador de Pessoas</a>

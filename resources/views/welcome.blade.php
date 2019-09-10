@@ -9,7 +9,10 @@
 </head>
 <body>
     <div id="app">
-        <example-component/>
+        <example-component>
+
+
+        </example-component>
     </div>
     <script>
         window.Laravel = <?php echo json_encode([
