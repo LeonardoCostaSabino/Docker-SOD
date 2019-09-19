@@ -11,7 +11,7 @@
     <div id="app">
         @yield('content')
     </div>
-    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;>
+    <footer>
         @include('includes.footer')
     </footer>
 </div>

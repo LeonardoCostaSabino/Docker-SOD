@@ -63,7 +63,7 @@
                     <a class="bg-info dropdown-item text-center"></a>
 
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="logout">Logout</a>
                 </div>
             </li>
             <img src="{{asset('images/user.PNG')}}" width="50" height="40" alt="">

@@ -36,4 +36,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+//    public function username()
+//    {
+//        return 'username';
+//    }
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'email.required' => 'A title is required',
+            'password.required'  => 'A message is required',
+        ];
+    }
+
+
 }
