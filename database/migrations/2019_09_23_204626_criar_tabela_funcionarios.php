@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Funcionarios extends Migration
+class CriarTabelaFuncionarios extends Migration
 {
     /**
      * Run the migrations.
@@ -22,7 +22,6 @@ class Funcionarios extends Migration
             $table->unsignedBigInteger('usuario.id')->index();
             $table->timestampsTz();
 
-
             $table->foreign('fisica.id')
             ->references('id')
             ->on('fisicas')
@@ -34,15 +33,7 @@ class Funcionarios extends Migration
             ->on('usuarios')
             ->onDelete('cascade')
             ->onUpdate('cascade');
-
-
-
-
-
-
-
-
-        }); 
+        });
     }
 
     /**
@@ -52,6 +43,6 @@ class Funcionarios extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('funcionarios');
     }
 }

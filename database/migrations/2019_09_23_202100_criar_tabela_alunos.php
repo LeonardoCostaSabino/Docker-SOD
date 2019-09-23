@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Alunos extends Migration
+class CriarTabelaAlunos extends Migration
 {
     /**
      * Run the migrations.
@@ -29,16 +29,7 @@ class Alunos extends Migration
             ->on('fisicas')
             ->onDelete('cascade')
             ->onUpdate('cascade');
-
-
-
-            
-
-
-
         });
-
-
     }
 
     /**
@@ -48,6 +39,6 @@ class Alunos extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('alunos');
     }
 }

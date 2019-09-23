@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaProfissoes extends Migration
+class CriarTabelaEscolaridades extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CriarTabelaProfissoes extends Migration
      */
     public function up()
     {
-        Schema::create('profissoes',function(Blueprint $table){
+        Schema::create('escolaridades', function (Blueprint $table){
             $table->bigIncrements('id')->primary();
-            $table->string('nome',55);
-            $table->string('tipo',20);
-            $table->timestampsTz();
+            $table->string('tipo');
+            $table->string('instituicao');
+            $table->string('nivel');
+            $table->timestampTz();
         });
     }
 
@@ -28,6 +29,6 @@ class CriarTabelaProfissoes extends Migration
      */
     public function down()
     {
-        Schema::drop('profissoes');
+        Schema::drop('escolaridades');
     }
 }

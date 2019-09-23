@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Enderecos extends Migration
+class CriarTabelaEnderecos extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class Enderecos extends Migration
     public function up()
     {
         Schema::create('enderecos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->primary();
             $table->integer("cep");
             $table->string("complemento",30);
             $table->string("bairro",70);
@@ -22,7 +22,6 @@ class Enderecos extends Migration
             $table->string("cidade",70);
             $table->string("logradouro",100);
             $table->timestampsTz();
-
         });
 
     }
@@ -34,6 +33,6 @@ class Enderecos extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('enderecos');
     }
 }
