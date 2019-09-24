@@ -18,6 +18,11 @@ class CriarTabelaJuridicas extends Migration
             $table->integer('cnpj');
             $table->string('razao')->unique();
             $table->string('servico');
+            $table->string('objetivo');
+            $table->string('inscricaoestadual');
+            $table->string('inscricaomunicipal');
+            $table->boolean('microempresa');
+            $table->string('tipo');
             $table->timestampTz();
 
         $table->foreign("id")

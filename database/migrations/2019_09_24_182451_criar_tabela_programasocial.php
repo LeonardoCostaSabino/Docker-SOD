@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaEscolaridades extends Migration
+class CriarTabelaProgramasocial extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CriarTabelaEscolaridades extends Migration
      */
     public function up()
     {
-        Schema::create('escolaridades', function (Blueprint $table){
+        Schema::create('programasocial', function (Blueprint $table){
             $table->bigIncrements('id')->primary();
-            $table->string('tipo');
-            $table->string('instituicao');
-            $table->string('nivel');
-            $table->enum('status',['concluido','interrompido','cursando']);
+            $table->string("nome");
+            $table->string("tipo");
+            $table->string("atividade");
             $table->timestampTz();
+
         });
     }
 
@@ -30,6 +30,6 @@ class CriarTabelaEscolaridades extends Migration
      */
     public function down()
     {
-        Schema::drop('escolaridades');
+        //
     }
 }

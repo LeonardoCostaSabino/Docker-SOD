@@ -21,6 +21,12 @@ class CriarTabelaEnderecos extends Migration
             $table->string("estado",70);
             $table->string("cidade",70);
             $table->string("logradouro",100);
+            $table->string("construcao",50);
+            $table->string("situacao",50);
+            $table->string("tempo",50);
+            $table->integer("qtdcomodos",50);
+            $table->string("agua");
+            $table->boolean("saneamento");
             $table->timestampsTz();
         });
 

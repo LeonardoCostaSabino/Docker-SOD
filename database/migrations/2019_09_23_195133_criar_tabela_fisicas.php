@@ -21,6 +21,7 @@ class CriarTabelaFisicas extends Migration
             $table->date('datanascimento');
             $table->string('nacionalidade');
             $table->string('naturalidade');
+            $table->string('estadocivil');
             $table->unsignedBigInteger('escolaridade.id')->index();
             $table->unsignedBigInteger("profissoes.id")->index();
             $table->timestampTz();

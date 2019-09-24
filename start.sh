@@ -16,11 +16,7 @@ docker-compose kill
 
 docker-compose up -d --build
 
-sudo chmod 755 -R .
-
-sudo chmod 777 -R storage
-
-sudo chmod 777 -R public
+sudo chmod 777 -R .
 
 docker-compose exec app php artisan storage:link
 

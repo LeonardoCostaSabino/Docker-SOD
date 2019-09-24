@@ -17,6 +17,8 @@ class CriarTabelaAlunos extends Migration
 
             $table->bigIncrements('id')->primary();
             $table->integer('matricula');
+            $table->integer("periodo");
+            $table->string("curso");
             $table->date('dtentrada');
             $table->date('dtconclusao');
             $table->enum('status',['concluido','interrompido','cursando']);
