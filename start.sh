@@ -10,7 +10,13 @@ docker run --rm -v $(pwd):/app composer install
 
 docker run -v $(pwd):/app -w /app node:7 npm install
 
+sudo chmod 755 -R ../Docker-Laravel/node_modules
+
+sudo chmod 755 -R ../Docker-Laravel/vendor
+
 sudo chmod 777 -R ../Docker-Laravel/storage
+
+sudo chmod 777 -R ../Docker-Laravel/public
 
 docker-compose kill
 
