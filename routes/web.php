@@ -20,6 +20,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/localizar', 'LocalizadorController@index')->name('localizar');
+
 Route::get('/logout', function (){
     Auth::logout();
     return redirect()->route('login');
