@@ -12,25 +12,25 @@ docker run --rm -v $(pwd):/app composer install
 
 docker run -v $(pwd):/app -w /app node:7 npm install
 
-sudo chmod 755 -R ../Docker-Laravel
-
-sudo chmod 777 -R ../Docker-Laravel/storage
-
-sudo chmod 777 -R ../Docker-Laravel/public
-
-#sudo echo "127.0.1.1 local.sod.unisuam.edu.br" >> Documentos/leo
-
 docker-compose kill
 
 docker-compose up -d --build
+
+sudo chmod 755 -R .
+
+sudo chmod 777 -R storage
+
+sudo chmod 777 -R public
 
 docker-compose exec app php artisan storage:link
 
 docker-compose exec app php artisan key:generate
 
+sudo echo "127.0.1.1 local.sod.unisuam.edu.br" >> /etc/hosts
+
 echo "Finalizado"
 
-echo "Por favor entre no seu navegador e digite: localhost/home"
+echo "Por favor entre no seu navegador e digite: local.sod.unisuam.edu.br/home"
 
 #echo -e 'docker-compose exec db mysql -u root -p\n docker-compose exec db show databases;\n docker-compose exec db GRANT ALL ON sod.* TO 'sistemas'@'%' IDENTIFIED BY '123456';\n docker-compose exec db FLUSH PRIVILEGES;'
 
