@@ -31,8 +31,7 @@ services:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
-      App_network:
-        - ipv4_address: 172.20.200.10
+      - app-network
   #MySQL Service
   db:
     image: mysql:5.7.22
@@ -50,15 +49,18 @@ services:
       - dbdata:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      App_network:
-        - ipv4_address: 172.20.200.20
+      Frontend:
+        ipv4_address: 172.20.200.20
+
+
 volumes:
   dbdata:
     driver: local
 #Docker Networks
 networks:
-  App_network:
-    name: sod-unisuam
+  app-network:
+    driver: bridge
+  Frontend:
     driver: bridge
     ipam:
       driver: default
