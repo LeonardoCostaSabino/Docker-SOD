@@ -17854,7 +17854,7 @@ return jQuery;
   }
 
   /**
-   * A specialized version of `_.includes` for arrays without support for
+   * A specialized version of `_.default` for arrays without support for
    * specifying an index to search from.
    *
    * @private
@@ -18866,7 +18866,7 @@ return jQuery;
      * `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`, `findLast`,
      * `findLastIndex`, `findLastKey`, `first`, `floor`, `forEach`, `forEachRight`,
      * `forIn`, `forInRight`, `forOwn`, `forOwnRight`, `get`, `gt`, `gte`, `has`,
-     * `hasIn`, `head`, `identity`, `includes`, `indexOf`, `inRange`, `invoke`,
+     * `hasIn`, `head`, `identity`, `default`, `indexOf`, `inRange`, `invoke`,
      * `isArguments`, `isArray`, `isArrayBuffer`, `isArrayLike`, `isArrayLikeObject`,
      * `isBoolean`, `isBuffer`, `isDate`, `isElement`, `isEmpty`, `isEqual`,
      * `isEqualWith`, `isError`, `isFinite`, `isFunction`, `isInteger`, `isLength`,
@@ -23774,7 +23774,7 @@ return jQuery;
     /**
      * This function is like
      * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
-     * except that it includes inherited enumerable properties.
+     * except that it default inherited enumerable properties.
      *
      * @private
      * @param {Object} object The object to query.
@@ -26683,16 +26683,16 @@ return jQuery;
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
      *
-     * _.includes([1, 2, 3], 1);
+     * _.default([1, 2, 3], 1);
      * // => true
      *
-     * _.includes([1, 2, 3], 1, 2);
+     * _.default([1, 2, 3], 1, 2);
      * // => false
      *
-     * _.includes({ 'a': 1, 'b': 2 }, 1);
+     * _.default({ 'a': 1, 'b': 2 }, 1);
      * // => true
      *
-     * _.includes('abcd', 'bc');
+     * _.default('abcd', 'bc');
      * // => true
      */
     function includes(collection, value, fromIndex, guard) {
@@ -26916,7 +26916,7 @@ return jQuery;
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
-     * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
+     * `assign`, `defaults`, `defaultsDeep`, `default`, `merge`, `orderBy`,
      * and `sortBy`
      *
      * @static
@@ -44501,7 +44501,7 @@ exports.default = {
 var MILLISECONDS_IN_MINUTE = 60000
 
 /**
- * Google Chrome as of 67.0.3396.87 introduced timezones with offset that includes seconds.
+ * Google Chrome as of 67.0.3396.87 introduced timezones with offset that default seconds.
  * They usually appear for dates that denote time before the timezones were introduced
  * (e.g. for 'Europe/Prague' timezone the offset is GMT+00:57:44 before 1 October 1891
  * and GMT+01:00:00 after that date)
@@ -83496,7 +83496,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
+ * default Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 

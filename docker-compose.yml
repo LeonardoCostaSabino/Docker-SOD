@@ -9,14 +9,6 @@ services:
     container_name: app
     restart: unless-stopped
     tty: true
-    deploy:
-      resources:
-        limits:
-          cpus: '0.50'
-          memory: 35M
-        reservations:
-          cpus: '0.25'
-          memory: 10M
     environment:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
@@ -32,14 +24,6 @@ services:
     container_name: webserver
     restart: unless-stopped
     tty: true
-    deploy:
-      resources:
-        limits:
-          cpus: '0.30'
-          memory: 10M
-        reservations:
-          cpus: '0.15'
-          memory: 3M
     ports:
       - "80:80"
       - "443:443"
@@ -47,7 +31,8 @@ services:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
-      - app-network
+      App_network:
+        - ipv4_address: 172.20.200.10
   #MySQL Service
   db:
     image: mysql:5.7.22
@@ -61,23 +46,22 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
-    deploy:
-      resources:
-        limits:
-          cpus: '0.45'
-          memory: 190M
-        reservations:
-          cpus: '0.25'
-          memory: 120M
     volumes:
       - dbdata:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      - app-network
+      App_network:
+        - ipv4_address: 172.20.200.20
 volumes:
   dbdata:
     driver: local
 #Docker Networks
 networks:
-  app-network:
+  App_network:
+    name: sod-unisuam
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.200.0/24
+

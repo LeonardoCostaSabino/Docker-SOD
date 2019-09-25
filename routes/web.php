@@ -13,8 +13,17 @@ use \Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.welcome');
 });
+
+Route::get('/sobre', function () {
+    return view('pages.sobre');
+});
+
+Route::get('/funcoes', function () {
+    return view('pages.funcoesSOD');
+});
+
 
 Auth::routes();
 

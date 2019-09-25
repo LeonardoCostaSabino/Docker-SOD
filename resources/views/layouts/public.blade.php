@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}" >
 <head>
-    @include('includes.head')
+    @include('public.head')
 </head>
 <body>
 <div>
     <header>
-        @include('includes.public_header')
+        @include('public.header')
     </header>
     <div id="app">
         @yield('content')
     </div>
     <footer>
-        @include('includes.footer')
+        @include('default.footer')
     </footer>
 </div>
 </body>
