@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaProgramasocial extends Migration
+class CriarTabelaNucleos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CriarTabelaProgramasocial extends Migration
      */
     public function up()
     {
-        Schema::create('programasocial', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string("nome");
-            $table->string("tipo");
-            $table->string("atividade");
-            $table->timestampTz();
-
+        Schema::create('nucleos', function (Blueprint $table){
+            $table->bigIncrements('id');
+            $table->string('nome',30);
+            $table->timestampsTz();
         });
     }
 
@@ -30,6 +27,8 @@ class CriarTabelaProgramasocial extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('nucleos');
     }
 }
+
+

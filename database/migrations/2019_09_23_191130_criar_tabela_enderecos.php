@@ -14,7 +14,7 @@ class CriarTabelaEnderecos extends Migration
     public function up()
     {
         Schema::create('enderecos', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->integer("cep");
             $table->string("complemento",30);
             $table->string("bairro",70);
@@ -24,8 +24,8 @@ class CriarTabelaEnderecos extends Migration
             $table->string("construcao",50);
             $table->string("situacao",50);
             $table->string("tempo",50);
-            $table->integer("qtdcomodos",50);
-            $table->string("agua");
+            $table->integer("qtdcomodos");
+            $table->string("agua",30);
             $table->boolean("saneamento");
             $table->timestampsTz();
         });

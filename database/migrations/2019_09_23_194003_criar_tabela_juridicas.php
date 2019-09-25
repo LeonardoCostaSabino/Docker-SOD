@@ -14,7 +14,7 @@ class CriarTabelaJuridicas extends Migration
     public function up()
     {
         Schema::create('juridicas', function (Blueprint $table){
-            $table->unsignedBigInteger('id')->index();
+            $table->unsignedBigInteger('id')->unique();
             $table->integer('cnpj');
             $table->string('razao')->unique();
             $table->string('servico');
@@ -23,7 +23,7 @@ class CriarTabelaJuridicas extends Migration
             $table->string('inscricaomunicipal');
             $table->boolean('microempresa');
             $table->string('tipo');
-            $table->timestampTz();
+            $table->timestampsTz();
 
         $table->foreign("id")
             ->references("id")

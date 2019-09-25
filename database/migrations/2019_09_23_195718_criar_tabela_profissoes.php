@@ -14,9 +14,9 @@ class CriarTabelaProfissoes extends Migration
     public function up()
     {
         Schema::create('profissoes',function(Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string('nome',55);
-            $table->string('tipo',20);
+            $table->bigIncrements('id');
+            $table->string('nome',50);
+            $table->string('tipo',30);
             $table->timestampsTz();
         });
     }

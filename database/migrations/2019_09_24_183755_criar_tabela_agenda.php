@@ -14,12 +14,11 @@ class CriarTabelaAgenda extends Migration
     public function up()
     {
         Schema::create('agenda', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->date("data");
             $table->time("hora");
             $table->string("assunto");
-            $table->timestampTz();
-
+            $table->timestampsTz();
         });
     }
 
@@ -30,6 +29,6 @@ class CriarTabelaAgenda extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('agenda');
     }
 }

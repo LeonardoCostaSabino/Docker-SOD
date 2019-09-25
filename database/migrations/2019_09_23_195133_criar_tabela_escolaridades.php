@@ -14,12 +14,12 @@ class CriarTabelaEscolaridades extends Migration
     public function up()
     {
         Schema::create('escolaridades', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->string('tipo');
             $table->string('instituicao');
             $table->string('nivel');
             $table->enum('status',['concluido','interrompido','cursando']);
-            $table->timestampTz();
+            $table->timestampsTz();
         });
     }
 

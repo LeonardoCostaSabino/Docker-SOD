@@ -15,18 +15,17 @@ class CriarTabelaAlunos extends Migration
     {
         Schema::create('alunos',function(Blueprint $table){
 
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->integer('matricula');
             $table->integer("periodo");
             $table->string("curso");
             $table->date('dtentrada');
             $table->date('dtconclusao');
             $table->enum('status',['concluido','interrompido','cursando']);
-            $table->timestampsTz();
+            $table->unsignedBigInteger('fisica_id');
+            $table->timestamps();
 
-            $table->unsignedBigInteger('fisica.id')->index();
-
-            $table->foreign('fisica.id')
+            $table->foreign('fisica_id')
             ->references('id')
             ->on('fisicas')
             ->onDelete('cascade')

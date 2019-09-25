@@ -14,21 +14,21 @@ class CriarTabelaFinanceiro extends Migration
     public function up()
     {
         Schema::create('financeiros', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string('modalidade');
-            $table->string('bandeira');
+            $table->bigIncrements('id');
+            $table->string('modalidade',100);
+            $table->string('bandeira',50);
             $table->float('valor');
-            $table->unsignedBigInteger('funcionario.id')->index();
-            $table->unsignedBigInteger('juridica.id')->index();
-            $table->timestampTz();
+            $table->unsignedBigInteger('funcionario_id');
+            $table->unsignedBigInteger('juridica_id');
+            $table->timestampsTz();
 
-            $table->foreign("funcionario.id")
-                  ->references("id")
-                  ->on("funcionarios")
-                  ->onUpdate("cascade")
-                  ->onDelete("cascade");
+            $table->foreign("funcionario_id")
+                ->references("id")
+                ->on("funcionarios")
+                ->onUpdate("cascade")
+                ->onDelete("cascade");
 
-            $table->foreign("juridica.id")
+            $table->foreign("juridica_id")
                 ->references("id")
                 ->on("juridicas")
                 ->onUpdate("cascade")

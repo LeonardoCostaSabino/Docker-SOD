@@ -14,12 +14,12 @@ class CriartabelaPosts extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string('titulo');
+            $table->bigIncrements('id');
+            $table->string('titulo',70);
             $table->string('subtitulo');
             $table->string('corpo');
-            $table->string('categoria');
-            $table->timestampTz();
+            $table->string('categoria',50);
+            $table->timestampsTz();
         });
     }
 
@@ -33,3 +33,5 @@ class CriartabelaPosts extends Migration
         Schema::drop('posts');
     }
 }
+
+

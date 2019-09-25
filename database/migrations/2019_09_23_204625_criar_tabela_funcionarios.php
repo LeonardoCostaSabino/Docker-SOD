@@ -14,25 +14,25 @@ class CriarTabelaFuncionarios extends Migration
     public function up()
     {
         Schema::create('funcionarios', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->integer('ctps');
             $table->integer('matricula');
             $table->date('dtadmissao');
-            $table->unsignedBigInteger('fisica.id')->index();
-            $table->unsignedBigInteger('usuario.id')->index();
+            $table->unsignedBigInteger('fisica_id');
+            $table->unsignedBigInteger('usuario_id');
             $table->timestampsTz();
 
-            $table->foreign('fisica.id')
-            ->references('id')
-            ->on('fisicas')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+            $table->foreign('fisica_id')
+                ->references('id')
+                ->on('fisicas')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
-            $table->foreign('usuario.id')
-            ->references('id')
-            ->on('usuarios')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+            $table->foreign('usuario_id')
+                ->references('id')
+                ->on('usuarios')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
@@ -46,3 +46,6 @@ class CriarTabelaFuncionarios extends Migration
         Schema::drop('funcionarios');
     }
 }
+
+
+

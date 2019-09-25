@@ -14,9 +14,9 @@ class CriarTabelaAcessos extends Migration
     public function up()
     {
         Schema::create('acessos', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string('nome');
-            $table->timestampTz();
+            $table->bigIncrements('id');
+            $table->string('nome',50);
+            $table->timestampsTz();
         });
     }
 
@@ -30,3 +30,4 @@ class CriarTabelaAcessos extends Migration
         Schema::drop('acessos');
     }
 }
+

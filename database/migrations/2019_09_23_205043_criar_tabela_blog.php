@@ -14,16 +14,16 @@ class CriartabelaBlog extends Migration
     public function up()
     {
         Schema::create('blogs', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string("tema");
-            $table->string('post.id')->index();
-            $table->timestampTz();
+            $table->bigIncrements('id');
+            $table->string("tema",100);
+            $table->unsignedBigInteger('post_id');
+            $table->timestampsTz();
 
-            $table->foreign("post.id")
-                  ->on("posts")
-                  ->references("id")
-                  ->onDelete("cascade")
-                  ->onUpdate("cascade");
+            $table->foreign("post_id")
+                ->on("posts")
+                ->references("id")
+                ->onDelete("cascade")
+                ->onUpdate("cascade");
         });
     }
 

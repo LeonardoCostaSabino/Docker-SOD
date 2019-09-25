@@ -14,12 +14,12 @@ class CriarTabelaTelefones extends Migration
     public function up()
     {
         Schema::create('telefones', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->integer('ddtel');
             $table->integer('ddcel');
             $table->integer('telefone');
             $table->integer('celular');
-            $table->timestampTz();
+            $table->timestampsTz();
         });
     }
 

@@ -14,13 +14,13 @@ class CriarTabelaUsuarios extends Migration
     public function up()
     {
         Schema::create('usuarios', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string("nickname");
-            $table->string("senha");
-            $table->string('acesso.id')->index();
-            $table->timestampTz();
+            $table->bigIncrements('id');
+            $table->string("nickname",50);
+            $table->string("senha",30);
+            $table->unsignedBigInteger('acesso_id');
+            $table->timestampsTz();
 
-            $table->foreign("acesso.id")
+            $table->foreign("acesso_id")
                 ->on("acessos")
                 ->references("id")
                 ->onDelete("cascade")

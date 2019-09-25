@@ -14,17 +14,15 @@ class CriarTabelaDadossociais extends Migration
     public function up()
     {
         Schema::create('dadossociais', function (Blueprint $table){
-            $table->bigIncrements('id')->primary();
-            $table->string("renda");
+            $table->bigIncrements('id');
+            $table->integer("renda");
             $table->integer("filhos");
-            $table->string("composicaofamiliar");
-            $table->string("meiodetransporte");
-//            $table->string("planodesaude");
-//            $table->string("planodesaude");
-            $table->string('programasocial.id')->index();
-            $table->timestampTz();
+            $table->string("composicaofamiliar",50);
+            $table->string("meiodetransporte",50);
+            $table->unsignedBigInteger('programasocial_id');
+            $table->timestampsTz();
 
-            $table->foreign("programasocial.id")
+            $table->foreign("programasocial_id")
                 ->on("programasociais")
                 ->references("id")
                 ->onDelete("cascade")
@@ -39,6 +37,6 @@ class CriarTabelaDadossociais extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('dadossociais');
     }
 }

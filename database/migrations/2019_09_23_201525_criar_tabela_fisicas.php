@@ -14,31 +14,31 @@ class CriarTabelaFisicas extends Migration
     public function up()
     {
         Schema::create('fisicas', function (Blueprint $table){
-            $table->unsignedBigInteger('id')->index();
+            $table->unsignedBigInteger('id')->unique();
             $table->integer('cpf');
             $table->enum('sexo', ['masculino', 'feminino']);
-            $table->string('genero');
+            $table->string('genero',30);
             $table->date('datanascimento');
-            $table->string('nacionalidade');
-            $table->string('naturalidade');
-            $table->string('estadocivil');
-            $table->unsignedBigInteger('escolaridade.id')->index();
-            $table->unsignedBigInteger("profissoes.id")->index();
-            $table->timestampTz();
+            $table->string('nacionalidade',50);
+            $table->string('naturalidade',50);
+            $table->string('estadocivil',50);
+            $table->unsignedBigInteger('escolaridade_id');
+            $table->unsignedBigInteger("profissoes_id");
+            $table->timestampsTz();
 
             $table->foreign("id")
-                  ->references("id")
-                  ->on("pessoas")
-                  ->onDelete("cascade")
-                  ->onUpdate("cascade");
+                ->references("id")
+                ->on("pessoas")
+                ->onDelete("cascade")
+                ->onUpdate("cascade");
 
-            $table->foreign("escolaridade.id")
+            $table->foreign("escolaridade_id")
                 ->references("id")
                 ->on("escolaridades")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
 
-            $table->foreign("profissoes.id")
+            $table->foreign("profissoes_id")
                 ->references("id")
                 ->on("profissoes")
                 ->onDelete("cascade")
