@@ -1,101 +1,175 @@
 @extends('layouts.public')
 
 @section('content')
-<div class="container marketing">
+<main role=main>
 
-<!-- Three columns of text below the carousel -->
-<div class="row">
-  <div class="col-lg-4">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-      Abrir modal de demonstração
-    </button></p>
-
-    <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./images/1.jpg" alt="First slide">
           </div>
-          <div class="modal-body">
-            <p class="text-justify">
-              O núcleo permite aos alunos dos cursos de Direito e Serviço Social relacionarem conhecimentos teóricos à prática, e, assim, desenvolverem habilidades necessárias ao exercício profissional. Orientados por advogados e professores, os alunos atendem pessoas carentes das comunidades do entorno das Unidades.
-
-O NPJ prioriza o atendimento nas áreas de Direito Civil, da Família, do Trabalho e Previdenciário, abordando o Direito Penal em casos de delitos de menor potencial ofensivo.
-            </p>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/2.jpg" alt="Second slide">
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-primary">Salvar mudanças</button>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./images/3.jpg" alt="Third slide">
           </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
+
+      <div class=" marketing">
+      <div class="row">
+          <div class="col-lg-4">
+            <img class="img-fluid img-responsive" style="width:auto%;" src="{{asset('images/npj.jpg')}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p class="text-justify">
+            O núcleo permite aos alunos dos cursos de Direito e Serviço Social relacionarem
+             conhecimentos teóricos à prática, e, assim, desenvolverem habilidades necessárias ao exercício profissional. Orientados por advogados e professores,
+              os alunos atendem pessoas carentes das comunidades do entorno das Unidades.
+O NPJ prioriza o atendimento nas áreas de Direito Civil, da Família, do Trabalho e 
+Previdenciário, abordando o Direito Penal em casos de delitos de menor
+ potencial ofensivo.</p>
+            <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+              Abrir modal de demonstração
+            </button></p>
+
+            <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-justify">
+                      O núcleo permite aos alunos dos cursos de Direito e Serviço Social relacionarem conhecimentos teóricos à prática, e, assim, desenvolverem habilidades necessárias ao exercício profissional. Orientados por advogados e professores, os alunos atendem pessoas carentes das comunidades do entorno das Unidades.
+                      O NPJ prioriza o atendimento nas áreas de Direito Civil, da Família, do Trabalho e Previdenciário, abordando o Direito Penal em casos de delitos de menor potencial ofensivo.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h2>Heading</h2>
-    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-  </div><!-- /.col-lg-4 -->
-</div><!-- /.row -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded" src="{{asset('images/clesam.jpg')}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p class="text-justify">
+              DA CLESAM tem seu principal enfoque no treinamento e 
+              capacitação prática dos alunos, sendo estes devidamente 
+              orientados e supervisionados por professores da UNISUAM,
+               em suas áreas específicas de abrangência, orientando os
+                pacientes e usuários desde a prevenção, tratamento 
+                propriamente dito, até reabilitação e manutenção da 
+                qualidade de vida. O serviço é prestado à comunidade 
+                carente da Zona da Leopoldina e adjacências, oferecendo 
+                campo de prática profissional aos alunos dos cursos de
+                 Graduação e Pós-Graduação em Saúde.
+
+</p>
+
+<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+              Abrir modal de demonstração
+            </button></p>
+
+            <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-justify">
+                    A CLESAM tem seu principal 
+                    enfoque no treinamento e capacitação 
+                    prática dos alunos, sendo estes devidamente
+                     orientados e supervisionados por professores
+                      da UNISUAM, em suas áreas específicas 
+                      de abrangência, orientando os pacientes e 
+                      usuários desde a prevenção, tratamento 
+                      propriamente dito, até reabilitação e manutenção 
+                      da qualidade de vida. O serviço é prestado à
+                       comunidade carente da Zona da Leopoldina e 
+                       adjacências, oferecendo campo de prática 
+                       profissional aos alunos dos cursos de Graduação 
+                       e Pós-Graduação em Saúde.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded" src="{{asset('images/napp.jpg')}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p class="text-justify">
+            A educação se modificou e vem se transformando. Por isso, a UNISUAM tem um
+             núcleo que estuda os atos de aprender e de ensinar. Dentro da UNISUAM, a
+              atuação do NAPP é entender e eliminar os fatores que interferem no
+               processo educacional, participando, junto com as lideranças 
+               (coordenadores de curso, professores e representantes de turma) da 
+               remoção destas barreiras. O professor deve estar preparado para 
+               lidar com a questão da inclusão,
+             precisando ter consciência que o educando hoje é agente ativo no 
+             processo educacional.</p>
+            <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+              Abrir modal de demonstração
+            </button></p>
+
+            <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-justify">
+                    A educação se modificou e vem se transformando. Por isso, a UNISUAM tem um núcleo que estuda os atos de aprender e de ensinar. Dentro da UNISUAM, a atuação do NAPP é entender e eliminar os fatores que interferem no processo educacional, participando, junto com as lideranças (coordenadores de curso, professores e representantes de turma) da remoção destas barreiras. O professor deve estar preparado para lidar com a questão da inclusão, precisando ter consciência que o educando hoje é agente ativo no processo educacional.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        </div>
 
 
-<!-- START THE FEATURETTES -->
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d64589365%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d64589365%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22184.890625%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5 order-md-1">
-    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d64589369%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d64589369%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22184.890625%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d6458936c%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d6458936c%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22184.890625%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<!-- /END THE FEATURETTES -->
-
-</div>
+      </main>
 @stop
 
