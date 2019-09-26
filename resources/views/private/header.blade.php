@@ -42,7 +42,7 @@
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Agenda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Localizador de Pessoas</a>
+                <a class="nav-link" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#localizar">Localizador de Pessoas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>

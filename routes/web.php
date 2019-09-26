@@ -24,12 +24,16 @@ Route::get('/funcoes', function () {
     return view('pages.funcoesSOD');
 });
 
+Route::get('/localizar', function () {
+    return view('pages.localizar');
+});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/localizar', 'LocalizadorController@index')->name('localizar');
+//Route::get('/localizar', 'LocalizadorController@index')->name('localizar');
 
 Route::get('/logout', function (){
     Auth::logout();
