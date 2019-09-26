@@ -16,6 +16,7 @@ class CriarTabelaPessoas extends Migration
         Schema::create('pessoas', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nome', "100");
+            $table->longText('nome');
             $table->string('email',"60")->unique();
             $table->unsignedBigInteger('enderecos_id');
             $table->unsignedBigInteger('telefones_id');

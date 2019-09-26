@@ -17,6 +17,7 @@ class CriarTabelaFuncionarios extends Migration
             $table->bigIncrements('id');
             $table->integer('ctps');
             $table->integer('matricula');
+            $table->integer('numero_oab');
             $table->date('dtadmissao');
             $table->unsignedBigInteger('fisicas_id');
             $table->unsignedBigInteger('usuarios_id');

@@ -12,14 +12,14 @@ class Pessoas extends Model
     ];
 
     public function nucleo(){
-        return $this->hasOne(Nucleos::class,'nucleo_id');
+        return $this->hasOne(Nucleos::class);
     }
 
     public function endereco(){
-        return $this->hasOne(Enderecos::class,'endereco_id');
+        return $this->hasOne(Enderecos::class);
     }
 
     public function telefone(){
-        return $this->hasOne(Telefones::class,'telefone_id');
+        return $this->hasOne(Telefones::class);
     }
 }
