@@ -1,4 +1,4 @@
-@extends('layouts.private')
+@extends('layouts.public')
 
 @section('content')
 <div class="main">

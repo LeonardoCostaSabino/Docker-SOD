@@ -14,7 +14,7 @@ class CriarTabelaJuridicas extends Migration
     public function up()
     {
         Schema::create('juridicas', function (Blueprint $table){
-            $table->unsignedBigInteger('id')->unique();
+            $table->unsignedBigInteger('pessoas_id')->unique();
             $table->integer('cnpj');
             $table->string('razao')->unique();
             $table->string('servico');
@@ -25,12 +25,13 @@ class CriarTabelaJuridicas extends Migration
             $table->string('tipo');
             $table->timestampsTz();
 
-        $table->foreign("id")
+        $table->foreign("pessoas_id")
             ->references("id")
             ->on('pessoas')
             ->onUpdate("cascade")
             ->onDelete("cascade");
 
+            Schema::enableForeignKeyConstraints();
         });
     }
 

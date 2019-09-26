@@ -17,24 +17,24 @@ class CriarTabelaPessoas extends Migration
             $table->bigIncrements('id');
             $table->string('nome', "100");
             $table->string('email',"60")->unique();
-            $table->unsignedBigInteger('endereco_id');
-            $table->unsignedBigInteger('telefone_id');
-            $table->unsignedBigInteger('nucleo_id');
+            $table->unsignedBigInteger('enderecos_id');
+            $table->unsignedBigInteger('telefones_id');
+            $table->unsignedBigInteger('nucleos_id');
             $table->timestampsTz();
 
-            $table->foreign('endereco_id')
+            $table->foreign('enderecos_id')
                 ->references('id')
                 ->on('enderecos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('telefone_id')
+            $table->foreign('telefones_id')
                 ->references('id')
                 ->on('telefones')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('nucleo_id')
+            $table->foreign('nucleos_id')
                 ->references('id')
                 ->on('nucleos')
                 ->onDelete('cascade')

@@ -19,14 +19,16 @@ class CriarTabelaDadossociais extends Migration
             $table->integer("filhos");
             $table->string("composicaofamiliar",50);
             $table->string("meiodetransporte",50);
-            $table->unsignedBigInteger('programasocial_id');
+            $table->unsignedBigInteger('programasociais_id');
             $table->timestampsTz();
 
-            $table->foreign("programasocial_id")
+            $table->foreign("programasociais_id")
                 ->on("programasociais")
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 

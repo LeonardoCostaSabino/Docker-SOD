@@ -49,9 +49,7 @@ services:
       - dbdata:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      Frontend:
-        ipv4_address: 172.20.200.20
-
+      - app-network
 
 volumes:
   dbdata:
@@ -60,10 +58,4 @@ volumes:
 networks:
   app-network:
     driver: bridge
-  Frontend:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.200.0/24
 

@@ -29,6 +29,8 @@ class CriarTabelaTriagem extends Migration
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 

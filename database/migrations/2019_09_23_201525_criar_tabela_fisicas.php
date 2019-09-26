@@ -14,7 +14,7 @@ class CriarTabelaFisicas extends Migration
     public function up()
     {
         Schema::create('fisicas', function (Blueprint $table){
-            $table->unsignedBigInteger('id')->unique();
+            $table->unsignedBigInteger('pessoas_id')->unique();
             $table->integer('cpf');
             $table->enum('sexo', ['masculino', 'feminino']);
             $table->string('genero',30);
@@ -22,11 +22,11 @@ class CriarTabelaFisicas extends Migration
             $table->string('nacionalidade',50);
             $table->string('naturalidade',50);
             $table->string('estadocivil',50);
-            $table->unsignedBigInteger('escolaridade_id');
+            $table->unsignedBigInteger('escolaridades_id');
             $table->unsignedBigInteger("profissoes_id");
             $table->timestampsTz();
 
-            $table->foreign("id")
+            $table->foreign("pessoas_id")
                 ->references("id")
                 ->on("pessoas")
                 ->onDelete("cascade")
@@ -43,6 +43,8 @@ class CriarTabelaFisicas extends Migration
                 ->on("profissoes")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 

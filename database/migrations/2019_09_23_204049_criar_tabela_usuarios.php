@@ -17,14 +17,16 @@ class CriarTabelaUsuarios extends Migration
             $table->bigIncrements('id');
             $table->string("nickname",50);
             $table->string("senha",30);
-            $table->unsignedBigInteger('acesso_id');
+            $table->unsignedBigInteger('acessos_id');
             $table->timestampsTz();
 
-            $table->foreign("acesso_id")
+            $table->foreign("acessos_id")
                 ->on("acessos")
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 

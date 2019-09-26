@@ -22,14 +22,16 @@ class CriarTabelaAlunos extends Migration
             $table->date('dtentrada');
             $table->date('dtconclusao');
             $table->enum('status',['concluido','interrompido','cursando']);
-            $table->unsignedBigInteger('fisica_id');
+            $table->unsignedBigInteger('fisicas_id');
             $table->timestamps();
 
-            $table->foreign('fisica_id')
+            $table->foreign('fisicas_id')
             ->references('id')
             ->on('fisicas')
             ->onDelete('cascade')
             ->onUpdate('cascade');
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 

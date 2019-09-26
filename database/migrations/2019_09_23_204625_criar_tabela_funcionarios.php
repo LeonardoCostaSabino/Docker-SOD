@@ -18,21 +18,23 @@ class CriarTabelaFuncionarios extends Migration
             $table->integer('ctps');
             $table->integer('matricula');
             $table->date('dtadmissao');
-            $table->unsignedBigInteger('fisica_id');
-            $table->unsignedBigInteger('usuario_id');
+            $table->unsignedBigInteger('fisicas_id');
+            $table->unsignedBigInteger('usuarios_id');
             $table->timestampsTz();
 
-            $table->foreign('fisica_id')
+            $table->foreign('fisicas_id')
                 ->references('id')
                 ->on('fisicas')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('usuario_id')
+            $table->foreign('usuarios_id')
                 ->references('id')
                 ->on('usuarios')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+            Schema::enableForeignKeyConstraints();
         });
     }
 
