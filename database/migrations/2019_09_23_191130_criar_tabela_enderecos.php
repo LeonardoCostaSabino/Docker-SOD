@@ -13,7 +13,7 @@ class CriarTabelaEnderecos extends Migration
      */
     public function up()
     {
-        Schema::create('enderecos', function (Blueprint $table) {
+        Schema::create('sis.enderecos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer("cep");
             $table->string("complemento",30);
@@ -39,6 +39,6 @@ class CriarTabelaEnderecos extends Migration
      */
     public function down()
     {
-        Schema::drop('enderecos');
+        Schema::drop('sis.enderecos');
     }
 }

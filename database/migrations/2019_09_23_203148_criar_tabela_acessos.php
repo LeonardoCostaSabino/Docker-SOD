@@ -13,7 +13,7 @@ class CriarTabelaAcessos extends Migration
      */
     public function up()
     {
-        Schema::create('acessos', function (Blueprint $table){
+        Schema::create('sis.acessos', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nome',50);
             $table->timestampsTz();
@@ -27,7 +27,7 @@ class CriarTabelaAcessos extends Migration
      */
     public function down()
     {
-        Schema::drop('acessos');
+        Schema::drop('sis.acessos');
     }
 }
 

@@ -13,24 +13,24 @@ class CriarTabelaFinanceiro extends Migration
      */
     public function up()
     {
-        Schema::create('financeiros', function (Blueprint $table){
+        Schema::create('sis.financeiros', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('modalidade',100);
             $table->string('bandeira',50);
             $table->float('valor');
-            $table->unsignedBigInteger('funcionarios_id');
-            $table->unsignedBigInteger('juridicas_id');
+            $table->unsignedBigInteger('sis_funcionarios_id');
+            $table->unsignedBigInteger('sis_juridicas_id');
             $table->timestampsTz();
 
-            $table->foreign("funcionarios_id")
+            $table->foreign("sis_funcionarios_id")
                 ->references("id")
-                ->on("funcionarios")
+                ->on("sis.funcionarios")
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
 
-            $table->foreign("juridicas_id")
+            $table->foreign("sis_juridicas_id")
                 ->references("id")
-                ->on("juridicas")
+                ->on("sis.juridicas")
                 ->onUpdate("cascade")
                 ->onDelete("cascade");
 
@@ -45,6 +45,6 @@ class CriarTabelaFinanceiro extends Migration
      */
     public function down()
     {
-        Schema::drop('financeiros');
+        Schema::drop('sis.financeiros');
     }
 }

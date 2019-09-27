@@ -13,7 +13,7 @@ class CriarTabelaEscolaridades extends Migration
      */
     public function up()
     {
-        Schema::create('escolaridades', function (Blueprint $table){
+        Schema::create('sis.escolaridades', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('tipo');
             $table->string('instituicao');
@@ -30,6 +30,6 @@ class CriarTabelaEscolaridades extends Migration
      */
     public function down()
     {
-        Schema::drop('escolaridades');
+        Schema::drop('sis.escolaridades');
     }
 }

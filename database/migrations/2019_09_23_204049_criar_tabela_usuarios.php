@@ -13,15 +13,15 @@ class CriarTabelaUsuarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table){
+        Schema::create('sis.usuarios', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string("nickname",50);
             $table->string("senha",30);
-            $table->unsignedBigInteger('acessos_id');
+            $table->unsignedBigInteger('sis_acessos_id');
             $table->timestampsTz();
 
-            $table->foreign("acessos_id")
-                ->on("acessos")
+            $table->foreign("sis_acessos_id")
+                ->on("sis.acessos")
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
@@ -37,6 +37,6 @@ class CriarTabelaUsuarios extends Migration
      */
     public function down()
     {
-        Schema::drop('usuarios');
+        Schema::drop('sis.usuarios');
     }
 }

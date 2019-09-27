@@ -13,7 +13,7 @@ class CriarTabelaTelefones extends Migration
      */
     public function up()
     {
-        Schema::create('telefones', function (Blueprint $table){
+        Schema::create('sis.telefones', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->integer('ddtel');
             $table->integer('ddcel');
@@ -30,6 +30,6 @@ class CriarTabelaTelefones extends Migration
      */
     public function down()
     {
-        Schema::drop('telefones');
+        Schema::drop('sis.telefones');
     }
 }

@@ -13,7 +13,7 @@ class CriarTabelaProgramasocial extends Migration
      */
     public function up()
     {
-        Schema::create('programasociais', function (Blueprint $table){
+        Schema::create('sis.programasociais', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string("nome",70);
             $table->string("tipo",50);
@@ -29,6 +29,6 @@ class CriarTabelaProgramasocial extends Migration
      */
     public function down()
     {
-        Schema::drop('programasociais');
+        Schema::drop('sis.programasociais');
     }
 }

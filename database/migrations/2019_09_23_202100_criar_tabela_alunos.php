@@ -13,7 +13,7 @@ class CriarTabelaAlunos extends Migration
      */
     public function up()
     {
-        Schema::create('alunos',function(Blueprint $table){
+        Schema::create('sis.alunos',function(Blueprint $table){
 
             $table->bigIncrements('id');
             $table->integer('matricula');
@@ -22,12 +22,12 @@ class CriarTabelaAlunos extends Migration
             $table->date('dtentrada');
             $table->date('dtconclusao');
             $table->enum('status',['concluido','interrompido','cursando']);
-            $table->unsignedBigInteger('fisicas_id');
+            $table->unsignedBigInteger('sis_fisicas_id');
             $table->timestamps();
 
-            $table->foreign('fisicas_id')
+            $table->foreign('sis_fisicas_id')
             ->references('id')
-            ->on('fisicas')
+            ->on('sis.fisicas')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
@@ -42,6 +42,6 @@ class CriarTabelaAlunos extends Migration
      */
     public function down()
     {
-        Schema::drop('alunos');
+        Schema::drop('sis.alunos');
     }
 }

@@ -13,7 +13,7 @@ class CriarTabelaFisicas extends Migration
      */
     public function up()
     {
-        Schema::create('fisicas', function (Blueprint $table){
+        Schema::create('sis.fisicas', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->integer('cpf');
             $table->enum('sexo', ['masculino', 'feminino']);
@@ -23,26 +23,26 @@ class CriarTabelaFisicas extends Migration
             $table->string('naturalidade',50);
             $table->string('estadocivil',50);
             $table->string('nomeconjugue',50);
-            $table->unsignedBigInteger('escolaridades_id');
-            $table->unsignedBigInteger("profissoes_id");
-            $table->unsignedBigInteger('pessoas_id');
+            $table->unsignedBigInteger('sis_escolaridades_id');
+            $table->unsignedBigInteger("sis_profissoes_id");
+            $table->unsignedBigInteger('sis_pessoas_id');
             $table->timestampsTz();
 
-            $table->foreign("pessoas_id")
+            $table->foreign("sis_pessoas_id")
                 ->references("id")
-                ->on("pessoas")
+                ->on("sis.pessoas")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
 
-            $table->foreign("escolaridades_id")
+            $table->foreign("sis_escolaridades_id")
                 ->references("id")
-                ->on("escolaridades")
+                ->on("sis.escolaridades")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
 
-            $table->foreign("profissoes_id")
+            $table->foreign("sis_profissoes_id")
                 ->references("id")
-                ->on("profissoes")
+                ->on("sis.profissoes")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
 
@@ -57,6 +57,6 @@ class CriarTabelaFisicas extends Migration
      */
     public function down()
     {
-        Schema::drop('fisicas');
+        Schema::drop('sis.fisicas');
     }
 }

@@ -13,7 +13,7 @@ class CriarTabelaNucleos extends Migration
      */
     public function up()
     {
-        Schema::create('nucleos', function (Blueprint $table){
+        Schema::create('sis.nucleos', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nome',30);
             $table->timestampsTz();
@@ -27,7 +27,7 @@ class CriarTabelaNucleos extends Migration
      */
     public function down()
     {
-        Schema::drop('nucleos');
+        Schema::drop('sis.nucleos');
     }
 }
 

@@ -13,7 +13,7 @@ class CriartabelaPosts extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table){
+        Schema::create('sis.posts', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string('titulo',70);
             $table->string('subtitulo');
@@ -30,7 +30,7 @@ class CriartabelaPosts extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        Schema::drop('sis.posts');
     }
 }
 

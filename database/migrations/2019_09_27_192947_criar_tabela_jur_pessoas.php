@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaAgenda extends Migration
+class CriarTabelaJurPessoas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CriarTabelaAgenda extends Migration
      */
     public function up()
     {
-        Schema::create('sis.agenda', function (Blueprint $table){
+        Schema::create('jur.pessoas', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->date("data");
-            $table->time("hora");
-            $table->string("assunto");
+            $table->string("nomereu",70);
+            $table->longText("historicoreu",50);
+            $table->integer("cpfreu");
+            $table->integer("cnpjreu");
             $table->timestampsTz();
         });
     }
@@ -29,6 +30,6 @@ class CriarTabelaAgenda extends Migration
      */
     public function down()
     {
-        Schema::drop('sis.agenda');
+        Schema::drop('jur.pessoas');
     }
 }

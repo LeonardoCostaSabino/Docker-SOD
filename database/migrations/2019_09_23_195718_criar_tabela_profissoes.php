@@ -13,7 +13,7 @@ class CriarTabelaProfissoes extends Migration
      */
     public function up()
     {
-        Schema::create('profissoes',function(Blueprint $table){
+        Schema::create('sis.profissoes',function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('nome',50);
             $table->string('tipo',30);
@@ -28,6 +28,6 @@ class CriarTabelaProfissoes extends Migration
      */
     public function down()
     {
-        Schema::drop('profissoes');
+        Schema::drop('sis.profissoes');
     }
 }

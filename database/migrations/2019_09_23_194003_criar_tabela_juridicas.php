@@ -13,7 +13,7 @@ class CriarTabelaJuridicas extends Migration
      */
     public function up()
     {
-        Schema::create('juridicas', function (Blueprint $table){
+        Schema::create('sis.juridicas', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->integer('cnpj');
             $table->string('razao')->unique();
@@ -23,12 +23,12 @@ class CriarTabelaJuridicas extends Migration
             $table->string('inscricaomunicipal');
             $table->boolean('microempresa');
             $table->string('tipo');
-            $table->unsignedBigInteger('pessoas_id');
+            $table->unsignedBigInteger('sis_pessoas_id');
             $table->timestampsTz();
 
-        $table->foreign("pessoas_id")
+        $table->foreign("sis_pessoas_id")
             ->references("id")
-            ->on('pessoas')
+            ->on('sis.pessoas')
             ->onUpdate("cascade")
             ->onDelete("cascade");
 
@@ -43,6 +43,6 @@ class CriarTabelaJuridicas extends Migration
      */
     public function down()
     {
-        Schema::drop('juridicas');
+        Schema::drop('sis.juridicas');
     }
 }

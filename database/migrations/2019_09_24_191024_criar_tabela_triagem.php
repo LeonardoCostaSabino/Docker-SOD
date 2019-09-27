@@ -13,7 +13,7 @@ class CriarTabelaTriagem extends Migration
      */
     public function up()
     {
-        Schema::create('triagem', function (Blueprint $table){
+        Schema::create('sis.triagem', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->date("data");
             $table->time("hora");
@@ -21,11 +21,11 @@ class CriarTabelaTriagem extends Migration
             $table->string('supervisor',50);
             $table->boolean('desistencia');
             $table->string('motivo',140);
-            $table->unsignedBigInteger('pessoas_id');
+            $table->unsignedBigInteger('sis_pessoas_id');
             $table->timestampsTz();
 
-            $table->foreign("pessoas_id")
-                ->on("pessoas")
+            $table->foreign("sis_pessoas_id")
+                ->on("sis.pessoas")
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
@@ -41,6 +41,6 @@ class CriarTabelaTriagem extends Migration
      */
     public function down()
     {
-        Schema::drop('triagem');
+        Schema::drop('sis.triagem');
     }
 }

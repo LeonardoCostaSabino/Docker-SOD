@@ -13,31 +13,30 @@ class CriarTabelaPessoas extends Migration
      */
     public function up()
     {
-        Schema::create('pessoas', function (Blueprint $table){
+        Schema::create('sis.pessoas', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('nome', "100");
-            $table->longText('nome');
+            $table->string('nome', 100);
             $table->string('email',"60")->unique();
-            $table->unsignedBigInteger('enderecos_id');
-            $table->unsignedBigInteger('telefones_id');
-            $table->unsignedBigInteger('nucleos_id');
+            $table->unsignedBigInteger('sis_enderecos_id');
+            $table->unsignedBigInteger('sis_telefones_id');
+            $table->unsignedBigInteger('sis_nucleos_id');
             $table->timestampsTz();
 
-            $table->foreign('enderecos_id')
+            $table->foreign('sis_enderecos_id')
                 ->references('id')
-                ->on('enderecos')
+                ->on('sis.enderecos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('telefones_id')
+            $table->foreign('sis_telefones_id')
                 ->references('id')
-                ->on('telefones')
+                ->on('sis.telefones')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('nucleos_id')
+            $table->foreign('sis_nucleos_id')
                 ->references('id')
-                ->on('nucleos')
+                ->on('sis.nucleos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -52,6 +51,6 @@ class CriarTabelaPessoas extends Migration
      */
     public function down()
     {
-        Schema::drop('pessoas');
+        Schema::drop('sis.pessoas');
     }
 }

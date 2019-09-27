@@ -13,14 +13,14 @@ class CriartabelaBlog extends Migration
      */
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table){
+        Schema::create('sis.blogs', function (Blueprint $table){
             $table->bigIncrements('id');
             $table->string("tema",100);
-            $table->unsignedBigInteger('posts_id');
+            $table->unsignedBigInteger('sis_posts_id');
             $table->timestampsTz();
 
-            $table->foreign("posts_id")
-                ->on("posts")
+            $table->foreign("sis_posts_id")
+                ->on("sis.posts")
                 ->references("id")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
@@ -36,6 +36,6 @@ class CriartabelaBlog extends Migration
      */
     public function down()
     {
-        Schema::drop('blogs');
+        Schema::drop('sis.blogs');
     }
 }
