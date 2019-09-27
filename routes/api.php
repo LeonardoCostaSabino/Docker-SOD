@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,15 +12,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('cadastrar', 'API\NucleoController@cadastrar');
+Route::post('cadastrar', 'API\NucleoController@criar');
 Route::get('mostrar', 'API\NucleoController@mostrarTodos');
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 
 Route::middleware('auth:api')->group( function () {
-    Route::resource('nucleos', 'API\NucleoController');
-    Route::resource('enderecos', 'API\EnderecoController');
-    Route::resource('telefones', 'API\TelefoneController');
-    Route::resource('pessoas', 'API\PessoaController');
+    Route::resource('nucleos', 'API\NucleoController' );
 });

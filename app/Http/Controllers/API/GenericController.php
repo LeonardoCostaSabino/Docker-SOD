@@ -19,7 +19,7 @@ class GenericController extends Controller
             'mensagem' => $mensagem
         ];
 
-        return response()->json($mensagem, 200);
+        return response()->json($resposta, 200);
     }
 
     /**
