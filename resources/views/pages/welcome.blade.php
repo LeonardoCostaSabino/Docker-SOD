@@ -3,33 +3,8 @@
 @section('content')
 <main role=main>
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="./images/1.jpg" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./images/2.jpg" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./images/3.jpg" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
 
+    <carrosel-component></carrosel-component>
       <div class=" marketing">
       <div class="row">
           <div class="col-lg-4">
@@ -39,7 +14,7 @@
             O núcleo permite aos alunos dos cursos de Direito e Serviço Social relacionarem
              conhecimentos teóricos à prática, e, assim, desenvolverem habilidades necessárias ao exercício profissional. Orientados por advogados e professores,
               os alunos atendem pessoas carentes das comunidades do entorno das Unidades.
-O NPJ prioriza o atendimento nas áreas de Direito Civil, da Família, do Trabalho e 
+O NPJ prioriza o atendimento nas áreas de Direito Civil, da Família, do Trabalho e
 Previdenciário, abordando o Direito Penal em casos de delitos de menor
  potencial ofensivo.</p>
             <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
@@ -75,14 +50,14 @@ Previdenciário, abordando o Direito Penal em casos de delitos de menor
             <img class="rounded" src="{{asset('images/clesam.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
             <p class="text-justify">
-              DA CLESAM tem seu principal enfoque no treinamento e 
-              capacitação prática dos alunos, sendo estes devidamente 
+              DA CLESAM tem seu principal enfoque no treinamento e
+              capacitação prática dos alunos, sendo estes devidamente
               orientados e supervisionados por professores da UNISUAM,
                em suas áreas específicas de abrangência, orientando os
-                pacientes e usuários desde a prevenção, tratamento 
-                propriamente dito, até reabilitação e manutenção da 
-                qualidade de vida. O serviço é prestado à comunidade 
-                carente da Zona da Leopoldina e adjacências, oferecendo 
+                pacientes e usuários desde a prevenção, tratamento
+                propriamente dito, até reabilitação e manutenção da
+                qualidade de vida. O serviço é prestado à comunidade
+                carente da Zona da Leopoldina e adjacências, oferecendo
                 campo de prática profissional aos alunos dos cursos de
                  Graduação e Pós-Graduação em Saúde.
 
@@ -103,18 +78,18 @@ Previdenciário, abordando o Direito Penal em casos de delitos de menor
                   </div>
                   <div class="modal-body">
                     <p class="text-justify">
-                    A CLESAM tem seu principal 
-                    enfoque no treinamento e capacitação 
+                    A CLESAM tem seu principal
+                    enfoque no treinamento e capacitação
                     prática dos alunos, sendo estes devidamente
                      orientados e supervisionados por professores
-                      da UNISUAM, em suas áreas específicas 
-                      de abrangência, orientando os pacientes e 
-                      usuários desde a prevenção, tratamento 
-                      propriamente dito, até reabilitação e manutenção 
+                      da UNISUAM, em suas áreas específicas
+                      de abrangência, orientando os pacientes e
+                      usuários desde a prevenção, tratamento
+                      propriamente dito, até reabilitação e manutenção
                       da qualidade de vida. O serviço é prestado à
-                       comunidade carente da Zona da Leopoldina e 
-                       adjacências, oferecendo campo de prática 
-                       profissional aos alunos dos cursos de Graduação 
+                       comunidade carente da Zona da Leopoldina e
+                       adjacências, oferecendo campo de prática
+                       profissional aos alunos dos cursos de Graduação
                        e Pós-Graduação em Saúde.
                     </p>
                   </div>
@@ -125,7 +100,7 @@ Previdenciário, abordando o Direito Penal em casos de delitos de menor
                 </div>
               </div>
             </div>
-           
+
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded" src="{{asset('images/napp.jpg')}}" alt="Generic placeholder image" width="140" height="140">
@@ -134,11 +109,11 @@ Previdenciário, abordando o Direito Penal em casos de delitos de menor
             A educação se modificou e vem se transformando. Por isso, a UNISUAM tem um
              núcleo que estuda os atos de aprender e de ensinar. Dentro da UNISUAM, a
               atuação do NAPP é entender e eliminar os fatores que interferem no
-               processo educacional, participando, junto com as lideranças 
-               (coordenadores de curso, professores e representantes de turma) da 
-               remoção destas barreiras. O professor deve estar preparado para 
+               processo educacional, participando, junto com as lideranças
+               (coordenadores de curso, professores e representantes de turma) da
+               remoção destas barreiras. O professor deve estar preparado para
                lidar com a questão da inclusão,
-             precisando ter consciência que o educando hoje é agente ativo no 
+             precisando ter consciência que o educando hoje é agente ativo no
              processo educacional.</p>
             <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
               Abrir modal de demonstração
@@ -168,8 +143,6 @@ Previdenciário, abordando o Direito Penal em casos de delitos de menor
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
         </div>
-
-
       </main>
 @stop
 

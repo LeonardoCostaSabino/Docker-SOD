@@ -30,7 +30,7 @@
             @endif
                 <a class="nav-link" href="sobre">Sobre nós</a>
             </li>
-            <span class="font-italic navbar-text ml-5 text-info">
+            <span class="font-italic navbar-text text-center  text-info">
                 SOD o Sistema de Otimização de Dados da Unisuam que foi para voce!
             </span>
         </ul>

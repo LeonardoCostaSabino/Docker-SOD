@@ -4,6 +4,11 @@ echo "Bem-vindo ao SOD 2.0\n";
 
 echo "Criado pela DigitalOcean, desenvolvedor utilizador: Leonardo Costa Sabino";
 
+echo "-------------MENU------------------
+      | 1- Iniciar atualização do sistema"
+
+read -r opcao
+
 cp .env.example .env
 
 cp .env.example .env.backup
