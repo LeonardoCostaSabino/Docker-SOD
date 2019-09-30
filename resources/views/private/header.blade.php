@@ -72,15 +72,15 @@
 </nav>
 
 <script>
-    export default {
-        data () {
-            return {
-                nucleo: "Polen",
-                User: "SOD",
-                Cargo: "Unisuam"
-            }
-        }
-    }
+    // export default {
+    //     data () {
+    //         return {
+    //             nucleo: "Polen",
+    //             User: "SOD",
+    //             Cargo: "Unisuam"
+    //         }
+    //     }
+    // }
 
 
 </script>

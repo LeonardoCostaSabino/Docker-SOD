@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         factory(\App\Pessoas::class, 10)->create()->each(function ($pessoas){
 
-//            $pessoas->nucleo()->save(factory(\App\Nucleos::class)->make());
+//            $pessoas->nucleo()->save(factory(\App\Nucleo::class)->make());
 //
 //            $pessoas->endereco()->save(factory(\App\Enderecos::class)->make());
 //

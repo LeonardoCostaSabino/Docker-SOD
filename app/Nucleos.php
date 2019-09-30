@@ -8,7 +8,7 @@ class Nucleos extends Model
 {
 
     /**
-     * The attributes that are mass assignable.
+     * The attributes that are mass asssignable.
      *
      * @var array
      */

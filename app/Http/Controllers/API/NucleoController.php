@@ -15,10 +15,12 @@ class NucleoController extends GenericController
      * @return \Illuminate\Http\Response
      */
     public function mostrarTodos() {
-        $nucleos = Nucleos::all();
+        $nucleos = Nucleos::all()->jsonSerialize();
 
-        return $this->mensagemSucesso($nucleos->toArray(), "Nucleos retornados com sucesso");
+//        return $this->mensagemSucesso($nucleos, "Nucleo retornados com sucesso");
+            return response($nucleos);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,7 +41,7 @@ class NucleoController extends GenericController
 
         $nucleos = Nucleos::create($input);
 
-        return $this->mensagemSucesso($nucleos->toArray(), "Nucleos criados com sucesso");
+        return $this->mensagemSucesso($nucleos->toArray(), "Nucleo criados com sucesso");
     }
 
     /**
@@ -54,7 +56,7 @@ class NucleoController extends GenericController
         if (is_null($nucleos)){
             return $this->messagemErro("Nucleo não encontrado");
         }
-        return $this->mensagemSucesso($nucleos->toArray(), "Nucleos retornados com sucesso");
+        return $this->mensagemSucesso($nucleos->toArray(), "Nucleo retornados com sucesso");
     }
 
     /**
@@ -78,7 +80,7 @@ class NucleoController extends GenericController
         $nucleos->name = $input['nome'];
         $nucleos->save();
 
-        return $this->mensagemSucesso($nucleos->toArray(), 'Nucleos atualizados com sucesso');
+        return $this->mensagemSucesso($nucleos->toArray(), 'Nucleo atualizados com sucesso');
     }
 
     /**
