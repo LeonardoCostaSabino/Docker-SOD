@@ -1,0 +1,28 @@
+#intro-unidade{padding:0 20px}#txt-intro-unidade{padding-right:20px}#txt-intro-unidade p{font-size:18px}#intro-unidade .endereco{background:#1580aa;color:#fff;font-size:18px;padding:20px;margin:40px 0}.cor-bs{background:#ef7d00!important}.cor-bg{background:#f5c200!important}.cor-cg{background:#0f96ae!important}.cor-jp{background:#96ad4f!important}.cor-rc{background:#ea5c36!important}#mapa-unidade iframe{min-height:350px}#mapa-unidade iframe.mapa-campo-grande{min-height:380px}#mapa-unidade iframe.mapa-bangu{min-height:300px}#numeros-unidade{text-align:center;background-size:cover!important}#numeros-unidade h1{color:#fff!important}.box-numeros-unidade{background:none;border:1px solid #fff;color:#fff;padding:10px;margin:6px;display:inline-block;vertical-align:middle;max-width:270px;max-height:90px}.box-numeros-unidade .numeros{font-size:50px;font-family:'pt_sansbold';line-height:50px}.box-numeros-unidade p{color:#fff!important;line-height:20px}#intro-unidade .box-campo-grande .endereco{margin:10px 15px;padding:5px 10px}#intro-unidade .box-bangu .endereco{margin:10px 15px;padding:5px 10px}#cursos-unidade{text-align:center}#cursos-unidade h1{color:#fff!important}.aviso-recreio{border:1px solid #ccc;padding:30px;text-align:center}.lista-de-cursos-unidades ul.display-posts-listing li.listing-item{list-style:none!important;background:none;border:solid 1px #fff;padding:10px;text-align:center;width:270px;margin:10px;display:inline-block;vertical-align:middle;font-size:14px;font-family:'pt_sansbold'}.lista-de-cursos-unidades ul.display-posts-listing li.listing-item a{color:#fff;display:block}.lista-de-cursos-unidades ul.display-posts-listing li.listing-item:hover{animation:cursos-unidades-animate .4s ease forwards}.lista-de-cursos-unidades ul.display-posts-listing li.listing-item:hover a{color:#0b4c64}.botao_360{width:100%;padding:20px;text-align:center;text-transform:uppercase;background:#ee7f01;color:#fff;font-weight:bold;font-size:18px}.botao_360:hover{animation:botao-360-animate .4s ease forwards}@keyframes botao-360-animate {
+   from {
+      background: #ee7f01;
+   }
+   to { 
+     background: #ff9900; 
+	
+   }
+}@keyframes cursos-unidades-animate {
+   from {
+      background: none ;
+	  color: #fff;
+   }
+   to { 
+     background: #fff; 
+	 color: #0b4c64;
+	
+   }
+}#botao-pos-unidades h1,#botao-mestrado-unidades h1,#botao-doutorado-unidades h1{color:#fff!important;text-align:center}#botao-pos-unidades h2,#botao-mestrado-unidades h2,#botao-doutorado-unidades h2{font-family:'pt_sansregular';color:#fff!important;text-align:center}#botao-pos-unidades div{padding:40px;background:#2f5188}#botao-mestrado-unidades div{padding:40px;background:#d77c06}#botao-doutorado-unidades div{padding:40px;background:#13847b}#infra-unidade h1{color:#6a6a6a!important;font-size:40px}.wrap-infra-e-servicos{text-align:center}.box-infra-e-servicos{display:inline-block;margin:10px;width:220px;height:230px;overflow:hidden!important}.txt-infra-e-servicos{background:rgba(0,0,0,.8);padding:15px;color:#fff!important;position:relative;top:-40px;height:230px;display:block!important}.txt-infra-e-servicos p{color:#fff!important;font-size:14px!important}.txt-infra-e-servicos:hover{animation:infra-e-servicos-animate .4s ease forwards}.txt-infra-e-servicos h3{color:#fff!important;text-align:center;font-size:14px!important;font-family:'pt_sansbold'!important;margin-bottom:20px}#slider-infra{margin-top:-40px}@keyframes infra-e-servicos-animate {
+   from {
+    top: -40px;
+	  
+   }
+   to { 
+    top: -230px;
+	
+   }
+}#txt-etus{color:#fff;font-size:22px;line-height:35px!important}.infra-etus-item{margin-top:-10px;padding:7px;display:block;width:100%;clear:both}#infra-etus img{float:left;margin:0 10px}#infra-etus p{margin:8px 0;color:#fff;font-size:16px;line-height:normal!important}#infra-etus{border-left:1px #fff solid}#infra-etus:before{content:'\f0da';font-family:FontAwesome;color:#fff;font-size:24px;position:relative;top:90px;left:-15px}#etus-cursos h1{color:#fff!important}#etus-cursos ul{margin:auto;text-align:center}#etus-cursos ul li{display:inline-block;list-style:none;border-right:1px solid #fff;color:#fff;padding:0 10px;font-size:20px}#etus-cursos ul li:last-child{border-right:none}@media screen and (max-width:768px){.lista-de-cursos-unidades ul.display-posts-listing li.listing-item{width:100%;margin:10px 0}.box-infra-e-servicos{overflow:none!important;height:460px}.txt-infra-e-servicos{top:0;background:#333}.txt-infra-e-servicos:hover{animation:none}}

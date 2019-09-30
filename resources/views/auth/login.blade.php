@@ -2,8 +2,13 @@
 
 @section('content')
 <div class="main">
+
+
+
     <div class="container">
+        
             <div class="middle" >
+                
                 <div id="login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -26,7 +31,10 @@
                                     </span>
                                 @enderror
                             </p> <!-- JS because of IE support; better: placeholder="Password" -->
-                            <div>
+                           
+                           
+                            
+                            <div> 
                                 @if (Route::has('password.request'))
                                     <span style="width:48%; text-align:left;  display: inline-block;">
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -35,8 +43,10 @@
                                     </span>
                                 @endif
                                 <span style="width:50%; text-align:right;  display: inline-block;">
+                                
                                     <input type="submit" value="{{ __('Login') }}" class="btn btn-primary">
                                 </span>
+   
                                     <!-- Authentication Links -->
                                     @guest
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Possui cadastro?') }}</a>
@@ -61,4 +71,7 @@
 
     </div>
 </div>
+
+
+
 @endsection
