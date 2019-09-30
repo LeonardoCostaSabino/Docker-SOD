@@ -21,10 +21,11 @@
                                     </div>
                                 </div>
                                 <div class=" col-md-4 pb-2">
+
                                     <select class="form-control" id="tipo_busca">
                                         <option selected>Selecione...</option>
                                         <option value="nome">Nome</option>
-                                        <option value="matricula">Matrícula</option>
+                                        <option value="matricula">Matricula</option>
                                         <option value="nucleo">Nucleo</option>
                                         <option value="email">E-mail</option>
                                         <option value="local">Local</option>
@@ -45,9 +46,9 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>teste</td>
+                            <tr v-for="nucleo in this.list">
+                                <th scope="row">{{nucleo.id}}</th>
+                                <td>{{nucleo.nome}}</td>
                                 <td>teste@teste.com</td>
                                 <td>0000</td>
                                 <td>nucleo</td>
@@ -89,8 +90,32 @@
         </div>
     </div>
 </template>
+
 <script>
     export default {
-    }
+        data () {
+            return {
+                list: ['1', '2'],
+                nucleos: {
+                    id: '1',
+                    nome: '2'
+                }
+            };
+        },
+        created() {
+            this.mostrarTodos();
+        },
+
+        methods: {
+            mostrarTodos() {
+                axios.get('http://localhost/api/mostrar')
+                    .then((resposta) => {
+                        this.list = resposta
+                    })
+                    .catch(error => console.log(error));
+            }
+        }
+    };
+
 </script>
 

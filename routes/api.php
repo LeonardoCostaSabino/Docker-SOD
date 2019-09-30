@@ -19,5 +19,8 @@ Route::get('mostrar', 'API\NucleoController@mostrarTodos');
 //    return $request->user();
 
 Route::middleware('auth:api')->group( function () {
-    Route::resource('nucleos', 'API\NucleoController' );
+    Route::middleware('cors')->group(function(){
+        Route::resource('nucleos', 'API\NucleoController' );
+    });
+
 });

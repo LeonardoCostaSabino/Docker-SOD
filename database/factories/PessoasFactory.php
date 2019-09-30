@@ -46,13 +46,13 @@ $factory->define(Pessoas::class, function (Faker $faker) {
     return [
         'nome' => $faker->name,
         'email' => $faker->safeEmail,
-        'enderecos_id' => function () {
+        'sis_enderecos_id' => function () {
             return factory(Enderecos::class)->create()->id;
         },
-        'telefones_id' => function () {
+        'sis_telefones_id' => function () {
         return factory(Telefones::class)->create()->id;
         },
-        'nucleos_id' => function () {
+        'sis_nucleos_id' => function () {
             return factory(Nucleos::class)->create()->id;
         }
     ];

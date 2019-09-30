@@ -7,13 +7,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="../../images/1.jpg" alt="First slide">
+                <img class="d-block w-100" :src="imagem1" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="../../images/2.jpg" alt="Second slide">
+                <img class="d-block w-100" :src="imagem2" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="../../images/3.jpg" alt="Third slide">
+                <img class="d-block w-100" :src="imagem3" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -28,5 +28,6 @@
 </template>
 <script>
     export default {
+        props: ['imagem1','imagem2','imagem3']
     }
 </script>

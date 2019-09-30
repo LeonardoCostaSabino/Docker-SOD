@@ -2,10 +2,17 @@
 
 @section('content')
 <main role=main>
+<<<<<<< HEAD
 
 
     <carrosel-component></carrosel-component>
  <!--
+=======
+    <carrosel-component imagem1="{{asset('images/1.jpg')}}"
+                        imagem2="{{asset('images/2.jpg')}}"
+                        imagem3="{{asset('images/3.jpg')}}"
+    ></carrosel-component>
+>>>>>>> c8ce2da0545fb3ee3b17052aa43471c3866de59c
       <div class=" marketing">
      
       <div class="row">
