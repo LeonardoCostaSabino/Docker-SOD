@@ -8,14 +8,15 @@ echo "-------------MENU------------------
       | 1 - Iniciar atualização do sistema
       | 2 - Atualizar o .env
       | 3 - Adicionar Host no Linux
-      | 4 - Atualizar o ambiente"
+      | 4 - Atualizar o ambiente
+      | 5 - Adicionar Permissões ao projeto"
 
 read -r opcao
 
   case $opcao in
     1)
       docker run --rm -v $(pwd):/app composer install
-      docker run -v $(pwd):/app -w /app node:7 npm install
+      docker run -v $(pwd):/app -w /app node:latest npm install
       docker-compose kill
       sudo chmod 777 -R .
       docker-compose up -d
@@ -36,6 +37,10 @@ read -r opcao
       echo "Finalizado"
       echo "Por favor entre no seu navegador e digite: local.sod.unisuam.edu.br/home"
       ;;
+    5)
+
+
+    ;;
 esac
 #echo -e 'docker-compose exec db mysql -u root -p\n docker-compose exec db show databases;\n docker-compose exec db GRANT ALL ON sod.* TO 'sistemas'@'%' IDENTIFIED BY '123456';\n docker-compose exec db FLUSH PRIVILEGES;'
 
