@@ -7,10 +7,7 @@ if [ $# -lt 2 ]; then
   exit 1;
 fi
 
-docker run --rm --interactive --tty \
+docker exec -it \
  --user $(id -u):$(id -g) \
- --volume /etc/passwd:/etc/passwd:ro \
- --volume /etc/group:/etc/group:ro \
- --volume "$PWD":/var/www/ \
- digitalocean.com/php php artisan make:$1 $2 $3 $4 $5
+ app php artisan make:$1 $2 $3 $4 $5
 
