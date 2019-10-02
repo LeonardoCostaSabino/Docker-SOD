@@ -37,7 +37,7 @@
                         <table class="table table-striped table-responsive-lg">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">#1234</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">E-mail</th>
                                 <th scope="col">Ramal</th>
@@ -46,11 +46,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr v-for="nucleo in this.list">
+                            <tr v-for="nucleo in list">
                                 <th scope="row">{{nucleo.id}}</th>
                                 <td>{{nucleo.nome}}</td>
-                                <td>teste@teste.com</td>
-                                <td>0000</td>
+                                <td>teste@.com</td>
+                                <td>000</td>
                                 <td>nucleo</td>
                                 <td><button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ver_info">Ver</button></td>
                             </tr>
@@ -93,28 +93,23 @@
 
 <script>
     export default {
-        data () {
-            return {
-                list: ['1', '2'],
-                nucleos: {
-                    id: '1',
-                    nome: '2'
-                }
-            };
-        },
         created() {
             this.mostrarTodos();
         },
-
-        methods: {
-            mostrarTodos() {
-                axios.get('http://localhost/api/mostrar')
-                    .then((resposta) => {
-                        this.list = resposta
-                    })
-                    .catch(error => console.log(error));
+        data(){
+            return {
+                list:{}
             }
+        },
+        methods: {
+        mostrarTodos() {
+            axios.get('http://localhost/api/mostrar')
+                .then((resposta) => {
+                    this.list = resposta.data;
+                })
+                .catch(error => console.log(error));
         }
+    }
     };
 
 </script>
